@@ -7,7 +7,7 @@ const store = configureStore({
   reducer: {
     contatos: contatosReducer,
     filtro: filtroReducer
-}
+  }
 })
 
 export type RootReducer = ReturnType<typeof store.getState>

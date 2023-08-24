@@ -4,7 +4,7 @@ class Contato {
   nome: string
   tipo: enums.Tipo
   email: string
-  telefone: number
+  telefone: string
   descricao: string
   id: number
 
@@ -13,7 +13,7 @@ class Contato {
     tipo: enums.Tipo,
     descricao: string,
     email: string,
-    telefone: number,
+    telefone: string,
     id: number
   ) {
     this.nome = nome

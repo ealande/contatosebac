@@ -5,7 +5,7 @@ import { Botao } from '../../styles'
 
 type TagProps = {
   tipo: enums.Tipo
-  telefone: number
+  telefone: string
   email: string
   parametro: 'tipo'
 }

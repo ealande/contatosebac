@@ -11,7 +11,7 @@ const initialState: ContatoState = {
     {
       id: 1,
       nome: 'Maria',
-      telefone: 4194848484,
+      telefone: '4194848484',
       email: 'maria@maria.com',
       tipo: enums.Tipo.FAMILIA,
       descricao: 'mãe'
@@ -19,7 +19,7 @@ const initialState: ContatoState = {
     {
       id: 2,
       nome: 'Joao',
-      telefone: 4194848484,
+      telefone: '4194848484',
       email: 'joao@maria.com',
       tipo: enums.Tipo.FAMILIA,
       descricao: 'primo'
@@ -27,7 +27,7 @@ const initialState: ContatoState = {
     {
       id: 3,
       nome: 'Pedro',
-      telefone: 4194848484,
+      telefone: '4194848484',
       email: 'pedro@pedro.com',
       tipo: enums.Tipo.TRABALHO,
       descricao: 'setor jurídico'
@@ -40,14 +40,16 @@ const contatosSlice = createSlice({
   initialState: initialState,
   reducers: {
     remover: (state, action: PayloadAction<number>) => {
-      state.itens = state.itens.filter((Contato) => Contato.id !== action.payload)
+      state.itens = state.itens.filter(
+        (Contato) => Contato.id !== action.payload
+      )
     },
     editar: (state, action: PayloadAction<Contato>) => {
       const indexDoContato = state.itens.findIndex(
         (t) => t.id === action.payload.id
       )
 
-      if (indexDoContato>= 0) {
+      if (indexDoContato >= 0) {
         state.itens[indexDoContato] = action.payload
       }
     },
